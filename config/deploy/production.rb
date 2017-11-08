@@ -59,3 +59,4 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+server 'resorttoken.com', user: 'deploy', roles: %w{wep app db}
