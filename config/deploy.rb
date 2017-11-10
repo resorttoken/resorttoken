@@ -3,6 +3,7 @@ lock "~> 3.10.0"
 
 set :application, 'resorttoken'
 set :repo_url, 'https://github.com/resorttoken/resorttoken' # Edit this to match your repository
+set :user, 'deploy'
 set :branch, :master
 set :deploy_to, '/home/deploy/resorttoken'
 set :pty, true
