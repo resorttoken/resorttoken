@@ -2,7 +2,7 @@
 lock "~> 3.10.0"
 
 # Change these
-server 'resorttoken.com', port: 80, roles: [:web, :app, :db], primary: true
+server 'resorttoken.com',  roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:resorttoken/resorttoken.git'
 set :application,     'resorttoken'

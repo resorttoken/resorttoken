@@ -8761,3 +8761,71 @@
   INFO [c93f5558] Running /usr/bin/env echo "Branch master (at 9c265f3eed455b06c81e54ad6e32944f8ff2be1b) deployed as release 20171110074245 by mike" >> /home/deploy/resorttoken/revisions.log as deploy@resorttoken.com
  DEBUG [c93f5558] Command: cd /home/deploy/resorttoken/releases && /usr/bin/env echo "Branch master (at 9c265f3eed455b06c81e54ad6e32944f8ff2be1b) deployed as release 20171110074245 by mike" >> /home/deploy/resorttoken/revisions.log
   INFO [c93f5558] Finished in 1.099 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-11 00:17:12 -0800 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d44ab3a3] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [d44ab3a3] Command: [ -d ~/.rvm ]
+ DEBUG [5a6c57cb] Running [ -d ~/.rvm ] on resorttoken.com
+ DEBUG [5a6c57cb] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-11 00:18:23 -0800 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8d7b3521] Running [ -d ~/.rvm ] on resorttoken.com
+ DEBUG [8d7b3521] Command: [ -d ~/.rvm ]
+ DEBUG [a851cde1] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [a851cde1] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-11 00:21:09 -0800 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bd948941] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [bd948941] Command: [ -d ~/.rvm ]
+ DEBUG [bd948941] Finished in 3.833 seconds with exit status 0 (successful).
+ DEBUG [e016c9cb] Running ~/.rvm/bin/rvm version as deploy@resorttoken.com
+ DEBUG [e016c9cb] Command: ~/.rvm/bin/rvm version
+ DEBUG [e016c9cb] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [e016c9cb] 	
+ DEBUG [e016c9cb] Finished in 0.975 seconds with exit status 0 (successful).
+ DEBUG [20b08d83] Running ~/.rvm/bin/rvm current as deploy@resorttoken.com
+ DEBUG [20b08d83] Command: ~/.rvm/bin/rvm current
+ DEBUG [20b08d83] 	ruby-2.3.3
+ DEBUG [20b08d83] 	
+ DEBUG [20b08d83] Finished in 0.957 seconds with exit status 0 (successful).
+ DEBUG [d24b2984] Running ~/.rvm/bin/rvm default do ruby --version as deploy@resorttoken.com
+ DEBUG [d24b2984] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [d24b2984] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [d24b2984] 	
+ DEBUG [d24b2984] Finished in 1.510 seconds with exit status 0 (successful).
+  INFO [3d322966] Running /usr/bin/env mkdir -p /tmp as deploy@resorttoken.com
+ DEBUG [3d322966] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3d322966] Finished in 0.771 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-resorttoken-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-resorttoken-production-mike.sh 100.0%
+  INFO [d718432e] Running /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh as deploy@resorttoken.com
+ DEBUG [d718432e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh
+  INFO [d718432e] Finished in 0.796 seconds with exit status 0 (successful).
+  INFO [9ee70cf3] Running /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD as deploy@resorttoken.com
+ DEBUG [9ee70cf3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-11 00:21:54 -0800 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9365b3f6] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [9365b3f6] Command: [ -d ~/.rvm ]
+ DEBUG [9365b3f6] Finished in 3.568 seconds with exit status 0 (successful).
+ DEBUG [499f5331] Running ~/.rvm/bin/rvm version as deploy@resorttoken.com
+ DEBUG [499f5331] Command: ~/.rvm/bin/rvm version
+ DEBUG [499f5331] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [499f5331] 	
+ DEBUG [499f5331] Finished in 0.964 seconds with exit status 0 (successful).
+ DEBUG [cf8bbaa8] Running ~/.rvm/bin/rvm current as deploy@resorttoken.com
+ DEBUG [cf8bbaa8] Command: ~/.rvm/bin/rvm current
+ DEBUG [cf8bbaa8] 	ruby-2.3.3
+ DEBUG [cf8bbaa8] 	
+ DEBUG [cf8bbaa8] Finished in 0.960 seconds with exit status 0 (successful).
+ DEBUG [c3d8d4c5] Running ~/.rvm/bin/rvm default do ruby --version as deploy@resorttoken.com
+ DEBUG [c3d8d4c5] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c3d8d4c5] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [c3d8d4c5] 	
+ DEBUG [c3d8d4c5] Finished in 1.054 seconds with exit status 0 (successful).
+  INFO [5ec8c04e] Running /usr/bin/env mkdir -p /tmp as deploy@resorttoken.com
+ DEBUG [5ec8c04e] Command: /usr/bin/env mkdir -p /tmp
