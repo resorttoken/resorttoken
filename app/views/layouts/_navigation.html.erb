@@ -20,20 +20,60 @@
             </li>
 
           <li class="<%= is_active_controller('dashboards') %>">
-            <%= link_to dashboards_dashboard_main_path do %>
-                <i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboard</span>
+            <%= link_to dashboards_path do %>
+                <i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">DASHBOARD</span>
             <% end %>
           </li>
-            <!--<li class="<%= 'active' if current_page?('/') %>">-->
-                <!--<%= link_to "/" do %>-->
-                <!--<i class="fa fa-laptop"></i> <span class="nav-label">Main page</span>-->
-                <!--<% end %>-->
-            <!--</li>-->
-            <!--<li class="<%= 'active' if current_page?('/home/minor') %>">-->
-                <!--<%= link_to "/home/minor" do %>-->
-                <!--<i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span>-->
-                <!--<% end %>-->
-            <!--</li>-->
+          <li class="<%= is_active_controller('marketplace') %>">
+            <%= link_to marketplace_index_path do %>
+                <i class="fa fa-shopping-cart"></i> <span class="nav-label" data-i18n="nav.metrics">MARKETPLACE</span>
+            <% end %>
+          </li>
+          <li class="<%= is_active_controller('assets') %>">
+            <%= link_to assets_index_path do %>
+                <i class="fa fa-eye"></i> <span class="nav-label" data-i18n="nav.metrics">ASSETS</span>
+            <% end %>
+          </li>
+          <li class="<%= is_active_controller('activity') %>">
+            <%= link_to activity_index_path do %>
+                <i class="fa fa-desktop"></i> <span class="nav-label" data-i18n="nav.metrics">ACTIVITY</span>
+            <% end %>
+          </li>
+          <li class="<%= is_active_controller('income') %>">
+            <%= link_to income_index_path do %>
+                <i class="fa fa-money"></i> <span class="nav-label" data-i18n="nav.metrics">INCOME</span>
+            <% end %>
+          </li>
+          <li class="<%= is_active_controller('payment') %>">
+            <%= link_to payment_index_path do %>
+                <i class="fa fa-credit-card-alt"></i> <span class="nav-label" data-i18n="nav.metrics">PAYMENT</span>
+            <% end %>
+          </li>
+          <li class="<%= is_active_controller('helpcenter') %>">
+            <a href=""><i class="fa fa-info-circle"></i> <span class="nav-label" data-i18n="nav.helpcenter">HELP CENTER</span> <span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level collapse <%= is_active_controller('helpcenter', 'in') %>">
+              <li class="<%= is_active_action('faq') %>"><%= link_to "FAQ", helpcenter_faq_path %></li>
+              <li class="<%= is_active_action('contact_us') %>"><%= link_to "Contact us", helpcenter_contact_us_path %></li>
+             </ul>
+          </li>
+          <li class="<%= is_active_controller('clientprofile') %>">
+              <a href=""><i class="fa fa-user"></i> <span class="nav-label" data-i18n="nav.clientprofile">CLIENT PROFILE</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level collapse <%= is_active_controller('clientprofile', 'in') %>">
+                <li class="<%= is_active_action('verification') %>"><%= link_to "Verification", clientprofile_verification_path %></li>
+                <li class="<%= is_active_action('invite_and_earn') %>"><%= link_to "Invite & Earn", clientprofile_invite_and_earn_path %></li>
+                <li class="<%= is_active_action('settings') %>"><%= link_to "Settings", clientprofile_settings_path %></li>
+              </ul>
+          </li>
+          <li class="<%= is_active_controller('partneradminarea') %>">
+            <a href=""><i class="fa fa-lock"></i> <span class="nav-label" data-i18n="nav.partneradminarea">PARTNER ADMIN AREA</span> <span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level collapse <%= is_active_controller('partneradminarea', 'in') %>">
+              <li class="<%= is_active_action('dashboard') %>"><%= link_to "Dashboard", partneradminarea_dashboard_path %></li>
+              <li class="<%= is_active_action('list_your_property') %>"><%= link_to "List Your Property", partneradminarea_list_your_property_path %></li>
+              <li class="<%= is_active_action('reports') %>"><%= link_to "Reports", partneradminarea_reports_path %></li>
+              <li class="<%= is_active_action('invite_and_earn') %>"><%= link_to "Invite & Earn", partneradminarea_invite_and_earn_path %></li>
+              <li class="<%= is_active_action('settings') %>"><%= link_to "Settings", partneradminarea_settings_path %></li>
+            </ul>
+          </li>
         </ul>
 
     </div>

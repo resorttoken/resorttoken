@@ -232,7 +232,7 @@ $(document).ready(function () {
     }
 });
 
-// check if browser support HTML5 local storage
+// Check if browser support HTML5 local storage
 function localStorageSupport() {
     return (('localStorage' in window) && window['localStorage'] !== null)
 }
