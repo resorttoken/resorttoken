@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b19bb52-8143-48fc-86d7-c14c2d8a9eb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q5/Q5w6mCwAD-IlENMeLuTVDKnx-rm5Evu0IK7FlLfo-p8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q5/Q5w6mCwAD-IlENMeLuTVDKnx-rm5Evu0IK7FlLfo-p8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ee/eesZP7bqYFTNrW0xLZPCxFjPIVpDx3Y7ILIKzbx_Kpw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ee/eesZP7bqYFTNrW0xLZPCxFjPIVpDx3Y7ILIKzbx_Kpw.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xG/xGEIAJMTEopj_6cFflMg8eppeSCNwqZ1gsxwpMI10pA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xG/xGEIAJMTEopj_6cFflMg8eppeSCNwqZ1gsxwpMI10pA.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/capistrano.log" afterPath="$PROJECT_DIR$/log/capistrano.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -36,21 +30,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/income/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="124" column="11" lean-forward="true" selection-start-line="124" selection-start-column="11" selection-end-line="124" selection-end-column="11" />
+            <state relative-caret-position="396">
+              <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/config/manifest.js">
+      <file leaf-file-name="join.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/landing/join.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="664">
+              <caret line="540" column="21" lean-forward="false" selection-start-line="540" selection-start-column="21" selection-end-line="540" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/landing/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="97" column="10" lean-forward="true" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="empty.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/empty.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -73,41 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3888">
               <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.flot.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/flot/jquery.flot.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56484">
-              <caret line="3143" column="4" lean-forward="false" selection-start-line="3143" selection-start-column="4" selection-end-line="3143" selection-end-column="4" />
-              <folding>
-                <marker date="1511247515479" expanded="true" signature="107648:107719" ph="..." />
-                <marker date="1511247515479" expanded="true" signature="107733:107804" ph="..." />
-                <marker date="1511247515479" expanded="true" signature="108105:108129" ph="..." />
-                <marker date="1511247515479" expanded="true" signature="109890:110003" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.ru">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,6 +135,7 @@
       <find>$.plot</find>
       <find>ibox float-e-margins</find>
       <find>Hal</find>
+      <find>find_asset</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,6 +242,20 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="income" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resorttoken" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resorttoken" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resorttoken" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resorttoken" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resorttoken" type="b2602c69:ProjectViewProjectNode" />
@@ -421,12 +415,12 @@
       <workItem from="1510973166526" duration="9596000" />
       <workItem from="1511163166706" duration="6398000" />
       <workItem from="1511232063813" duration="10139000" />
-      <workItem from="1511317552017" duration="2916000" />
+      <workItem from="1511317552017" duration="4350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60512000" />
+    <option name="totallyTimeSpent" value="61946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1375" height="807" extended-state="6" />
@@ -471,20 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/income/bonus_tokens.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/income/invite_and_earn.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/activity/buying_history.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -541,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/landing/join.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9720">
-          <caret line="540" column="21" lean-forward="false" selection-start-line="540" selection-start-column="21" selection-end-line="540" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/helpcenter/contact_us.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -594,6 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -707,13 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="9151" column="24" lean-forward="false" selection-start-line="9151" selection-start-column="24" selection-end-line="9151" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/landing/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -843,8 +810,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/income/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="124" column="11" lean-forward="true" selection-start-line="124" selection-start-column="11" selection-end-line="124" selection-end-column="11" />
+        <state relative-caret-position="396">
+          <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/landing/join.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="540" column="21" lean-forward="false" selection-start-line="540" selection-start-column="21" selection-end-line="540" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/landing/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="97" column="10" lean-forward="true" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.4.1@global/gems/sprockets-3.7.1/lib/sprockets/manifest.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/empty.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
           <folding />
         </state>
       </provider>
