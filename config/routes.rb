@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
 
+  get 'users/new'
+
   # Home Page
   get 'home/index'
+
+
+  # Users
+  get '/signup', to: 'users#new'
 
   # Landing Page
   get 'landing/index'
