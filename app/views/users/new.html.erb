@@ -1,24 +1,40 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
+<% provide(:title, "Sign Up") %>
+<div class="container">
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 form-outline"
+  >
+    <div class="text-center">
+    <a href="/" title="Resort Token" class="form-resort-token-logo">
+      <img src="" width="202" color="#235322" alt="Resort Token Logo">
+    </a>
+    </div>
     <%= form_for(@user, url: signup_path) do |f| %>
+      <h1 class="text-center form-header">Sign Up Resort Token</h1>
+        <div class="form-email">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+
+        </div>
+        <div class="form-password">  
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="form-password_confirm">
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+
         <%= render 'shared/error_messages' %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
-
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-        <%= f.submit "Create my account", class: "btn btn-primary" %>
+        <%= f.submit "Sign Up", class: "btn btn-primary form-btn-submit" %>
     <% end %>
+
   </div>
+</div>
+# <script>
+# document.getElementById("session_email").onblur = function() {
+#   $("#error_result").remove();
+# }
+# </script>
 </div>

@@ -5,6 +5,7 @@
 // or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
 //
 //
+
 //= require jquery/jquery-3.1.1.min.js
 //= require bootstrap-sprockets
 //= require metisMenu/jquery.metisMenu.js

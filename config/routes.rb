@@ -1,14 +1,27 @@
 Rails.application.routes.draw do
 
 
-  get 'users/new'
+  get 'sessions/new'
+
+  # get 'users/new'
 
   # Home Page
   get 'home/index'
 
 
   # Users
+  resources :users
+
+
   get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+
+  get '/reset_password', to: 'users#new'
+  
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  get '/logout',  to: 'sessions#destroy'
+  
 
   # Landing Page
   get 'landing/index'
