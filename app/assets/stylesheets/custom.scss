@@ -1,0 +1,71 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+.form-control {
+    font-size: 16px;
+    font-weight: 300;
+    height: 40px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 768px){
+    .form-outline {
+        margin-top: 100px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .form-outline {
+        margin-top: 150px;
+    }
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height:  40px;
+}
+.form-header {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 25px 0 0;
+}
+.form-email {
+    display: block;
+    margin-top: 15px;
+}
+.form-password {
+    display: block;
+    margin-top: 15px;
+}
+
+.form-password_confirm {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 3px;
+}
+
+.no-account {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    vertical-align: middle;
+
+}
+
+.error {
+    height: 13px;
+}
+
+
+.form-btn-submit{
+    color: #fff;
+}
+
+.btn-sign-up{
+}
