@@ -16584,3 +16584,1461 @@ I, [2017-11-21T23:17:06.960229 #25305]  INFO -- : Writing /home/deploy/apps/reso
  DEBUG [1f128365] 	Command restart sent success
  DEBUG [1f128365] 	
   INFO [1f128365] Finished in 1.386 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-07 22:52:06 -0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [90b1f4c8] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [90b1f4c8] Command: [ -d ~/.rvm ]
+ DEBUG [90b1f4c8] Finished in 5.336 seconds with exit status 0 (successful).
+ DEBUG [fabf1437] Running ~/.rvm/bin/rvm version as deploy@resorttoken.com
+ DEBUG [fabf1437] Command: ~/.rvm/bin/rvm version
+ DEBUG [fabf1437] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [fabf1437] 	
+ DEBUG [fabf1437] Finished in 1.683 seconds with exit status 0 (successful).
+ DEBUG [e86805d9] Running ~/.rvm/bin/rvm current as deploy@resorttoken.com
+ DEBUG [e86805d9] Command: ~/.rvm/bin/rvm current
+ DEBUG [e86805d9] 	ruby-2.3.3
+ DEBUG [e86805d9] 	
+ DEBUG [e86805d9] Finished in 1.786 seconds with exit status 0 (successful).
+ DEBUG [bc313bf6] Running ~/.rvm/bin/rvm default do ruby --version as deploy@resorttoken.com
+ DEBUG [bc313bf6] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [bc313bf6] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [bc313bf6] 	
+ DEBUG [bc313bf6] Finished in 2.007 seconds with exit status 0 (successful).
+  INFO [768c6af6] Running /usr/bin/env mkdir -p /tmp as deploy@resorttoken.com
+ DEBUG [768c6af6] Command: /usr/bin/env mkdir -p /tmp
+  INFO [768c6af6] Finished in 1.428 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-resorttoken-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-resorttoken-production-mike.sh 100.0%
+  INFO [970c483a] Running /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh as deploy@resorttoken.com
+ DEBUG [970c483a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh
+  INFO [970c483a] Finished in 1.651 seconds with exit status 0 (successful).
+  INFO [8d6c485e] Running /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD as deploy@resorttoken.com
+ DEBUG [8d6c485e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD )
+ DEBUG [8d6c485e] 	5ac33af635dadd8490007eb6027c36cacab6d65a
+ DEBUG [8d6c485e] 		HEAD
+  INFO [8d6c485e] Finished in 3.084 seconds with exit status 0 (successful).
+  INFO [8bc13398] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases as deploy@resorttoken.com
+ DEBUG [8bc13398] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases
+  INFO [8bc13398] Finished in 1.413 seconds with exit status 0 (successful).
+  INFO [2bff577c] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets as deploy@resorttoken.com
+ DEBUG [2bff577c] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets
+  INFO [2bff577c] Finished in 1.594 seconds with exit status 0 (successful).
+ DEBUG [e1b8733e] Running [ -f /home/deploy/apps/resorttoken/shared/puma.rb ] as deploy@resorttoken.com
+ DEBUG [e1b8733e] Command: [ -f /home/deploy/apps/resorttoken/shared/puma.rb ]
+ DEBUG [e1b8733e] Finished in 1.542 seconds with exit status 0 (successful).
+ DEBUG [3d4b985b] Running [ -f /home/deploy/apps/resorttoken/current/REVISION ] as deploy@resorttoken.com
+ DEBUG [3d4b985b] Command: [ -f /home/deploy/apps/resorttoken/current/REVISION ]
+ DEBUG [3d4b985b] Finished in 1.400 seconds with exit status 0 (successful).
+ DEBUG [309acb71] Running /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null as deploy@resorttoken.com
+ DEBUG [309acb71] Command: /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null
+ DEBUG [309acb71] 	8fcba70599e95ba0145e6ab3c9436099aa04fc12
+ DEBUG [309acb71] 	
+ DEBUG [309acb71] Finished in 1.434 seconds with exit status 0 (successful).
+ DEBUG [40db18af] Running [ -f /home/deploy/apps/resorttoken/repo/HEAD ] as deploy@resorttoken.com
+ DEBUG [40db18af] Command: [ -f /home/deploy/apps/resorttoken/repo/HEAD ]
+ DEBUG [40db18af] Finished in 1.602 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/resorttoken/repo
+ DEBUG [d57825e8] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [d57825e8] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [d57825e8] Finished in 1.519 seconds with exit status 0 (successful).
+  INFO [c9879eb4] Running /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git as deploy@resorttoken.com
+ DEBUG [c9879eb4] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git )
+  INFO [c9879eb4] Finished in 1.419 seconds with exit status 0 (successful).
+  INFO [1e06fe7d] Running /usr/bin/env git remote update --prune as deploy@resorttoken.com
+ DEBUG [1e06fe7d] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1e06fe7d] 	Fetching origin
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	remote: Counting objects: 185, done.[K
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   0% (1/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   1% (2/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   2% (3/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   3% (4/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   4% (5/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   5% (6/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   6% (7/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   7% (9/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   8% (10/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:   9% (11/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing obj
+ DEBUG [1e06fe7d] 	ects:  10% (12/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  11% (13/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  12% (14/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  13% (15/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  14% (17/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  15% (18/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  16% (19/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  17% (20/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  18% (21/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  19% (22/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing ob
+ DEBUG [1e06fe7d] 	jects:  20% (23/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  21% (25/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  22% (26/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  23% (27/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  24% (28/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  25% (29/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  26% (30/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  27% (32/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  28% (33/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  29% (34/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  30% (35/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  31% (36/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  32% (37/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  33% (38/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  34% (40/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  35% (41/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  36% (42/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  37% (43/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  38% (44/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  39% (45/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  40% (46/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  41% (48/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  42% (49/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  43% (50/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  44% (51/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  45% (52/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  46% (53/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  47% (55/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  48% (56/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  49% (57/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  50% (58/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  51% (59/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  52% (60/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  53% (61/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  54% (63/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  55% (64/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  56% (65/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  57% (66/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  58% (67/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  59% (68/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  60% (69/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  61% (71/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  62% (72/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  63% (73/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  64% (74/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  65% (75/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  66% (76/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  67% (78/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  68% (79/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  69% (80/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  70% (81/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  71% (82/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  72% (83/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  73% (84/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  74% (86/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  75% (87/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  76% (88/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  77% (89/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  78% (90/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  79% (91/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  80% (92/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  81% (94/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  82% (95/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  83% (96/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  84% (97/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  85% (98/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  86% (99/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  87% (101/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  88% (102/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  89% (103/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  90% (104/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  91% (105/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  92% (106/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  93% (107/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  94% (109/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  95% (110/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  96% (111/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  97% (112/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  98% (113/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects:  99% (114/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects: 100% (115/115)   [K
+ DEBUG [1e06fe7d] 	remote: Compressing objects: 100% (115/115), done.[K
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	Receiving objects:   0% (1/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   1% (2/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   2% (4/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   3% (6/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   4% (8/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   5% (10/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   6% (12/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   7% (13/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   8% (15/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:   9% (17/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  10% (19/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  11% (21/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  12% (23/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  13% (25/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  14% (26/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  15% (28/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  16% (30/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  17% (32/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  18% (34/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  19% (36/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  20% (37/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  21% (39/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  22% (41/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  23% (43/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  24% (45/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  25% (47/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  26% (49/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  27% (50/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  28% (52/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  29% (54/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  30% (56/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  31% (58/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  32% (60/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  33% (62/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  34% (63/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  35% (65/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  36% (67/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  37% (69/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  38% (71/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  39% (73/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  40% (74/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  41% (76/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  42% (78/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  43% (80/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  44% (82/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  45% (84/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  46% (86/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  47% (87/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  48% (89/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  49% (91/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  50% (93/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  51% (95/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  52% (97/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  53% (99/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  54% (100/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  55% (102/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  56% (104/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  57% (106/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  58% (108/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  59% (110/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  60% (111/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  61% (113/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  62% (115/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  63% (117/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  64% (119/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  65% (121/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  66% (123/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  67% (124/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  68% (126/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  69% (128/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  70% (130/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  71% (132/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  72% (134/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  73% (136/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  74% (137/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  75% (139/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  76% (141/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  77% (143/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  78% (145/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  79% (147/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  80% (148/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  81% (150/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  82% (152/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  83% (154/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  84% (156/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  85% (158/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  86% (160/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  87% (161/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  88% (163/185)   
+ DEBUG [1e06fe7d] 	remote: Total 185 (delta 60), reused 179 (delta 54), pack-reused 0[K
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	Receiving objects:  89% (165/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  90% (167/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  91% (169/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  92% (171/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  93% (173/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  94% (174/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  95% (176/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  96% (178/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  97% (180/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  98% (182/185)   
+ DEBUG [1e06fe7d] 	Receiving objects:  99% (184/185)   
+ DEBUG [1e06fe7d] 	Receiving objects: 100% (185/185)   
+ DEBUG [1e06fe7d] 	Receiving objects: 100% (185/185), 537.66 KiB | 0 bytes/s, done.
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	Resolving deltas:   0% (0/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:   1% (1/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:   3% (2/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:   5% (3/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:   6% (4/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:   8% (5/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  10% (6/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  11% (7/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  13% (8/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  15% (9/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  16% (10/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  23% (14/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  25% (15/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  26% (16/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  31% (19/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  33% (20/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  36% (22/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  38% (23/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  40% (24/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  43% (26/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  45% (27/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  46% (28/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  50% (30/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  51% (31/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  55% (33/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  58% (35/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  60% (36/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  63% (38/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  66% (40/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  68% (41/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  70% (42/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  71% (43/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  75% (45/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  76% (46/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  78% (47/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  80% (48/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  83% (50/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  86% (52/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  90% (54/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  91% (55/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  93% (56/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  96% (58/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas:  98% (59/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas: 100% (60/60)   
+ DEBUG [1e06fe7d] 	Resolving deltas: 100% (60/60), completed with 28 local objects.
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	From github.com:resorttoken/resorttoken
+ DEBUG [1e06fe7d] 	
+ DEBUG [1e06fe7d] 	   8fcba70..5ac33af  master     -> master
+ DEBUG [1e06fe7d] 	
+  INFO [1e06fe7d] Finished in 3.929 seconds with exit status 0 (successful).
+ DEBUG [c5e98ded] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [c5e98ded] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [c5e98ded] Finished in 1.572 seconds with exit status 0 (successful).
+  INFO [241d1ba9] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234 as deploy@resorttoken.com
+ DEBUG [241d1ba9] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234 )
+  INFO [241d1ba9] Finished in 1.441 seconds with exit status 0 (successful).
+  INFO [d88fe396] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208065234 as deploy@resorttoken.com
+ DEBUG [d88fe396] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208065234 )
+  INFO [d88fe396] Finished in 1.665 seconds with exit status 0 (successful).
+ DEBUG [64c55dd2] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [64c55dd2] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [64c55dd2] Finished in 1.550 seconds with exit status 0 (successful).
+ DEBUG [11f28b22] Running /usr/bin/env git rev-list --max-count=1 master as deploy@resorttoken.com
+ DEBUG [11f28b22] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [11f28b22] 	5ac33af635dadd8490007eb6027c36cacab6d65a
+ DEBUG [11f28b22] 	
+ DEBUG [11f28b22] Finished in 1.729 seconds with exit status 0 (successful).
+ DEBUG [323edd11] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [323edd11] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi
+ DEBUG [323edd11] Finished in 1.532 seconds with exit status 0 (successful).
+  INFO [29e9c0ab] Running /usr/bin/env echo "5ac33af635dadd8490007eb6027c36cacab6d65a" >> REVISION as deploy@resorttoken.com
+ DEBUG [29e9c0ab] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && /usr/bin/env echo "5ac33af635dadd8490007eb6027c36cacab6d65a" >> REVISION
+  INFO [29e9c0ab] Finished in 1.474 seconds with exit status 0 (successful).
+  INFO [0aacbfae] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234/public as deploy@resorttoken.com
+ DEBUG [0aacbfae] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234/public
+  INFO [0aacbfae] Finished in 1.450 seconds with exit status 0 (successful).
+ DEBUG [e2f339b6] Running [ -L /home/deploy/apps/resorttoken/releases/20171208065234/public/assets ] as deploy@resorttoken.com
+ DEBUG [e2f339b6] Command: [ -L /home/deploy/apps/resorttoken/releases/20171208065234/public/assets ]
+ DEBUG [e2f339b6] Finished in 1.664 seconds with exit status 1 (failed).
+ DEBUG [139a50f2] Running [ -d /home/deploy/apps/resorttoken/releases/20171208065234/public/assets ] as deploy@resorttoken.com
+ DEBUG [139a50f2] Command: [ -d /home/deploy/apps/resorttoken/releases/20171208065234/public/assets ]
+ DEBUG [139a50f2] Finished in 1.474 seconds with exit status 1 (failed).
+  INFO [0ff72f19] Running /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208065234/public/assets as deploy@resorttoken.com
+ DEBUG [0ff72f19] Command: /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208065234/public/assets
+  INFO [0ff72f19] Finished in 1.364 seconds with exit status 0 (successful).
+ DEBUG [6a330a1c] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [6a330a1c] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi
+ DEBUG [6a330a1c] Finished in 1.352 seconds with exit status 0 (successful).
+ DEBUG [e226818e] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle as deploy@resorttoken.com
+ DEBUG [e226818e] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle
+ DEBUG [e226818e] 	[31mThe following gems are missing[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * public_suffix (3.0.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * addressable (2.5.2)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * sshkit (1.15.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * bindex (0.5.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * byebug (9.1.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capistrano (3.10.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * xpath (2.1.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * capybara (2.15.4)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * childprocess (0.8.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * listen (3.1.5)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * selenium-webdriver (3.7.0)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * spring (2.0.2)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[31m * web-console (3.5.1)[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [e226818e] 	
+ DEBUG [e226818e] Finished in 2.652 seconds with exit status 1 (failed).
+  INFO [90fa35ae] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet as deploy@resorttoken.com
+ DEBUG [90fa35ae] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet
+  INFO [90fa35ae] Finished in 6.630 seconds with exit status 0 (successful).
+ DEBUG [73309773] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [73309773] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi
+ DEBUG [73309773] Finished in 1.140 seconds with exit status 0 (successful).
+  INFO [6e4f914e] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@resorttoken.com
+ DEBUG [6e4f914e] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [6e4f914e] 	Yarn executable was not detected in the system.
+ DEBUG [6e4f914e] 	
+ DEBUG [6e4f914e] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [6e4f914e] 	
+ DEBUG [6e4f914e] 	I, [2017-12-08T06:53:27.466480 #13750]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/users-45ca6bffc88b75b13176f5a28d223acde425bdc34755774d99618322b488aadf.css
+ DEBUG [6e4f914e] 	
+ DEBUG [6e4f914e] 	I, [2017-12-08T06:53:27.467032 #13750]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/users-45ca6bffc88b75b13176f5a28d223acde425bdc34755774d99618322b488aadf.css.gz
+ DEBUG [6e4f914e] 	
+ DEBUG [6e4f914e] 	I, [2017-12-08T06:53:27.620808 #13750]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/users-f78f0f583e152fa235ca51f99bab70d1aeb59675de57c78bcef18b5a2e8a5a5f.js
+ DEBUG [6e4f914e] 	
+ DEBUG [6e4f914e] 	I, [2017-12-08T06:53:27.621336 #13750]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/users-f78f0f583e152fa235ca51f99bab70d1aeb59675de57c78bcef18b5a2e8a5a5f.js.gz
+ DEBUG [6e4f914e] 	
+  INFO [6e4f914e] Finished in 37.145 seconds with exit status 0 (successful).
+ DEBUG [fd13fd16] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [fd13fd16] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi
+ DEBUG [fd13fd16] Finished in 1.083 seconds with exit status 0 (successful).
+  INFO [b277e95a] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [b277e95a] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208065234/assets_manifest_backup
+  INFO [b277e95a] Finished in 0.983 seconds with exit status 0 (successful).
+ DEBUG [905323e3] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [905323e3] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest*
+ DEBUG [905323e3] 	/home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [905323e3] 	
+ DEBUG [905323e3] Finished in 1.039 seconds with exit status 0 (successful).
+ DEBUG [6d3abebf] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [6d3abebf] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest*
+ DEBUG [6d3abebf] 	/home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [6d3abebf] 	
+ DEBUG [6d3abebf] Finished in 1.041 seconds with exit status 0 (successful).
+  INFO [672d237f] Running /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208065234/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [672d237f] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208065234/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208065234/assets_manifest_backup
+  INFO [672d237f] Finished in 1.117 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [acff46e0] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [acff46e0] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208065234; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208065234'" 1>&2; false; fi
+ DEBUG [acff46e0] Finished in 1.012 seconds with exit status 0 (successful).
+  INFO [1e89849a] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@resorttoken.com
+ DEBUG [1e89849a] Command: cd /home/deploy/apps/resorttoken/releases/20171208065234 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [1e89849a] 	== 20171202020643 AddIndexToUsersEmail: migrating =============================
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	rake aborted!
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	StandardError: An error has occurred, this and all later migrations canceled:
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	: CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [1e89849a] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/releases/20171208065234/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [1e89849a] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/reso
+ DEBUG [1e89849a] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	Caused by:
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	: CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [1e89849a] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/releases/20171208065234/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [1e89849a] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/reso
+ DEBUG [1e89849a] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	Caused by:
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [1e89849a] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/releases/20171208065234/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [1e89849a] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/reso
+ DEBUG [1e89849a] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	Tasks: TOP => db:migrate
+ DEBUG [1e89849a] 	
+ DEBUG [1e89849a] 	(See full trace by running task with --trace)
+ DEBUG [1e89849a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-07 23:08:20 -0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [83c6a1c1] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [83c6a1c1] Command: [ -d ~/.rvm ]
+ DEBUG [83c6a1c1] Finished in 3.592 seconds with exit status 0 (successful).
+ DEBUG [5f2cf531] Running ~/.rvm/bin/rvm version as deploy@resorttoken.com
+ DEBUG [5f2cf531] Command: ~/.rvm/bin/rvm version
+ DEBUG [5f2cf531] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [5f2cf531] 	
+ DEBUG [5f2cf531] Finished in 3.196 seconds with exit status 0 (successful).
+ DEBUG [97177bad] Running ~/.rvm/bin/rvm current as deploy@resorttoken.com
+ DEBUG [97177bad] Command: ~/.rvm/bin/rvm current
+ DEBUG [97177bad] 	ruby-2.3.3
+ DEBUG [97177bad] 	
+ DEBUG [97177bad] Finished in 1.541 seconds with exit status 0 (successful).
+ DEBUG [3ad345cd] Running ~/.rvm/bin/rvm default do ruby --version as deploy@resorttoken.com
+ DEBUG [3ad345cd] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [3ad345cd] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [3ad345cd] 	
+ DEBUG [3ad345cd] Finished in 1.970 seconds with exit status 0 (successful).
+  INFO [7bd04577] Running /usr/bin/env mkdir -p /tmp as deploy@resorttoken.com
+ DEBUG [7bd04577] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7bd04577] Finished in 1.091 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-resorttoken-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-resorttoken-production-mike.sh 100.0%
+  INFO [58d00091] Running /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh as deploy@resorttoken.com
+ DEBUG [58d00091] Command: /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh
+  INFO [58d00091] Finished in 1.603 seconds with exit status 0 (successful).
+  INFO [c46b987b] Running /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD as deploy@resorttoken.com
+ DEBUG [c46b987b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD )
+ DEBUG [c46b987b] 	5ac33af635dadd8490007eb6027c36cacab6d65a
+ DEBUG [c46b987b] 		HEAD
+  INFO [c46b987b] Finished in 2.967 seconds with exit status 0 (successful).
+  INFO [9709baeb] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases as deploy@resorttoken.com
+ DEBUG [9709baeb] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases
+  INFO [9709baeb] Finished in 1.153 seconds with exit status 0 (successful).
+  INFO [692c55fe] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets as deploy@resorttoken.com
+ DEBUG [692c55fe] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets
+  INFO [692c55fe] Finished in 1.156 seconds with exit status 0 (successful).
+ DEBUG [9b7e83c0] Running [ -f /home/deploy/apps/resorttoken/shared/puma.rb ] as deploy@resorttoken.com
+ DEBUG [9b7e83c0] Command: [ -f /home/deploy/apps/resorttoken/shared/puma.rb ]
+ DEBUG [9b7e83c0] Finished in 1.124 seconds with exit status 0 (successful).
+ DEBUG [bb4aa45f] Running [ -f /home/deploy/apps/resorttoken/current/REVISION ] as deploy@resorttoken.com
+ DEBUG [bb4aa45f] Command: [ -f /home/deploy/apps/resorttoken/current/REVISION ]
+ DEBUG [bb4aa45f] Finished in 1.143 seconds with exit status 0 (successful).
+ DEBUG [598515d4] Running /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null as deploy@resorttoken.com
+ DEBUG [598515d4] Command: /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null
+ DEBUG [598515d4] 	8fcba70599e95ba0145e6ab3c9436099aa04fc12
+ DEBUG [598515d4] 	
+ DEBUG [598515d4] Finished in 1.357 seconds with exit status 0 (successful).
+ DEBUG [d48af242] Running [ -f /home/deploy/apps/resorttoken/repo/HEAD ] as deploy@resorttoken.com
+ DEBUG [d48af242] Command: [ -f /home/deploy/apps/resorttoken/repo/HEAD ]
+ DEBUG [d48af242] Finished in 1.149 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/resorttoken/repo
+ DEBUG [ce8be869] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [ce8be869] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [ce8be869] Finished in 2.082 seconds with exit status 0 (successful).
+  INFO [316588fb] Running /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git as deploy@resorttoken.com
+ DEBUG [316588fb] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git )
+  INFO [316588fb] Finished in 1.118 seconds with exit status 0 (successful).
+  INFO [401c8381] Running /usr/bin/env git remote update --prune as deploy@resorttoken.com
+ DEBUG [401c8381] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [401c8381] 	Fetching origin
+ DEBUG [401c8381] 	
+  INFO [401c8381] Finished in 2.896 seconds with exit status 0 (successful).
+ DEBUG [09e0f984] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [09e0f984] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [09e0f984] Finished in 1.088 seconds with exit status 0 (successful).
+  INFO [351ff5e6] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846 as deploy@resorttoken.com
+ DEBUG [351ff5e6] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846 )
+  INFO [351ff5e6] Finished in 1.142 seconds with exit status 0 (successful).
+  INFO [c6240245] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208070846 as deploy@resorttoken.com
+ DEBUG [c6240245] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208070846 )
+  INFO [c6240245] Finished in 1.478 seconds with exit status 0 (successful).
+ DEBUG [99d03ac2] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [99d03ac2] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [99d03ac2] Finished in 1.680 seconds with exit status 0 (successful).
+ DEBUG [42bd9987] Running /usr/bin/env git rev-list --max-count=1 master as deploy@resorttoken.com
+ DEBUG [42bd9987] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [42bd9987] 	5ac33af635dadd8490007eb6027c36cacab6d65a
+ DEBUG [42bd9987] 	
+ DEBUG [42bd9987] Finished in 2.056 seconds with exit status 0 (successful).
+ DEBUG [94dd9cce] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [94dd9cce] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi
+ DEBUG [94dd9cce] Finished in 2.719 seconds with exit status 0 (successful).
+  INFO [42daa401] Running /usr/bin/env echo "5ac33af635dadd8490007eb6027c36cacab6d65a" >> REVISION as deploy@resorttoken.com
+ DEBUG [42daa401] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && /usr/bin/env echo "5ac33af635dadd8490007eb6027c36cacab6d65a" >> REVISION
+  INFO [42daa401] Finished in 1.085 seconds with exit status 0 (successful).
+  INFO [3fc4563f] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846/public as deploy@resorttoken.com
+ DEBUG [3fc4563f] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846/public
+  INFO [3fc4563f] Finished in 1.717 seconds with exit status 0 (successful).
+ DEBUG [8c6246f8] Running [ -L /home/deploy/apps/resorttoken/releases/20171208070846/public/assets ] as deploy@resorttoken.com
+ DEBUG [8c6246f8] Command: [ -L /home/deploy/apps/resorttoken/releases/20171208070846/public/assets ]
+ DEBUG [8c6246f8] Finished in 1.114 seconds with exit status 1 (failed).
+ DEBUG [4c69a926] Running [ -d /home/deploy/apps/resorttoken/releases/20171208070846/public/assets ] as deploy@resorttoken.com
+ DEBUG [4c69a926] Command: [ -d /home/deploy/apps/resorttoken/releases/20171208070846/public/assets ]
+ DEBUG [4c69a926] Finished in 1.112 seconds with exit status 1 (failed).
+  INFO [ca7364fa] Running /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208070846/public/assets as deploy@resorttoken.com
+ DEBUG [ca7364fa] Command: /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208070846/public/assets
+  INFO [ca7364fa] Finished in 1.129 seconds with exit status 0 (successful).
+ DEBUG [919bf7fe] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [919bf7fe] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi
+ DEBUG [919bf7fe] Finished in 1.128 seconds with exit status 0 (successful).
+ DEBUG [57b6db2f] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle as deploy@resorttoken.com
+ DEBUG [57b6db2f] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle
+ DEBUG [57b6db2f] 	[31mThe following gems are missing[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * public_suffix (3.0.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * addressable (2.5.2)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * sshkit (1.15.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * bindex (0.5.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * byebug (9.1.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capistrano (3.10.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * xpath (2.1.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * capybara (2.15.4)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * childprocess (0.8.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * listen (3.1.5)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * selenium-webdriver (3.7.0)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * spring (2.0.2)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[31m * web-console (3.5.1)[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [57b6db2f] 	
+ DEBUG [57b6db2f] Finished in 1.958 seconds with exit status 1 (failed).
+  INFO [05779986] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet as deploy@resorttoken.com
+ DEBUG [05779986] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet
+  INFO [05779986] Finished in 2.216 seconds with exit status 0 (successful).
+ DEBUG [0f282c2e] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [0f282c2e] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi
+ DEBUG [0f282c2e] Finished in 1.108 seconds with exit status 0 (successful).
+  INFO [71c47886] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@resorttoken.com
+ DEBUG [71c47886] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [71c47886] 	Yarn executable was not detected in the system.
+ DEBUG [71c47886] 	
+ DEBUG [71c47886] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [71c47886] 	
+  INFO [71c47886] Finished in 36.228 seconds with exit status 0 (successful).
+ DEBUG [8879e1a4] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [8879e1a4] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi
+ DEBUG [8879e1a4] Finished in 0.903 seconds with exit status 0 (successful).
+  INFO [3bb14ca2] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [3bb14ca2] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208070846/assets_manifest_backup
+  INFO [3bb14ca2] Finished in 0.886 seconds with exit status 0 (successful).
+ DEBUG [564ac081] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [564ac081] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest*
+ DEBUG [564ac081] 	/home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [564ac081] 	
+ DEBUG [564ac081] Finished in 0.995 seconds with exit status 0 (successful).
+ DEBUG [0a21be9e] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [0a21be9e] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest*
+ DEBUG [0a21be9e] 	/home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [0a21be9e] 	
+ DEBUG [0a21be9e] Finished in 0.987 seconds with exit status 0 (successful).
+  INFO [acf00673] Running /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208070846/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [acf00673] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208070846/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208070846/assets_manifest_backup
+  INFO [acf00673] Finished in 1.017 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [81972b31] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [81972b31] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208070846; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208070846'" 1>&2; false; fi
+ DEBUG [81972b31] Finished in 0.848 seconds with exit status 0 (successful).
+  INFO [51ad5e26] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@resorttoken.com
+ DEBUG [51ad5e26] Command: cd /home/deploy/apps/resorttoken/releases/20171208070846 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [51ad5e26] 	== 20171202020643 AddIndexToUsersEmail: migrating =============================
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	rake aborted!
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	StandardError: An error has occurred, this and all later migrations canceled:
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	: CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [51ad5e26] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/releases/20171208070846/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [51ad5e26] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/reso
+ DEBUG [51ad5e26] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	Caused by:
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	: CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [51ad5e26] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/releases/20171208070846/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [51ad5e26] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/reso
+ DEBUG [51ad5e26] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	Caused by:
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	PG::UndefinedTable: ERROR:  relation "users" does not exist
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:482:in `add_index'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/
+ DEBUG [51ad5e26] 	active_record/migration.rb:849:in `block in method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `block in say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:818:in `say_with_time'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:838:in `method_missing'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/releases/20171208070846/db/migrate/20171202020643_add_index_to_users_email.rb:3:in `change'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:792:in `exec_migration'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:775:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:774:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:953:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/tran
+ DEBUG [51ad5e26] 	saction.rb:194:in `block in within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1298:in `ddl_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `each'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `block in migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1317:in `with_advisory_lock'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1148:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:1007:in `up'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:985:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/reso
+ DEBUG [51ad5e26] 	rttoken/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/apps/resorttoken/shared/bundle/ruby/2.3.0/gems/rake-12.2.1/exe/rake:27:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	Tasks: TOP => db:migrate
+ DEBUG [51ad5e26] 	
+ DEBUG [51ad5e26] 	(See full trace by running task with --trace)
+ DEBUG [51ad5e26] 	
