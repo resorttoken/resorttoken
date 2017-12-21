@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
-  def new
-    render :layout => "registeration"
+  def login
+    render :layout => "empty"
   end
 
   def create
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       # Create an error message.
       @message = 'Invalid email or password. Please try again.'
       @userinfo = params[:session]
-      render :layout => "registeration", :template => 'sessions/new'
+      render :layout => "empty", :template => 'sessions/login'
     end
   end
 

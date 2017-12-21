@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   get 'sessions/new'
 
   # get 'users/new'
@@ -11,16 +15,17 @@ Rails.application.routes.draw do
 
   # Users
   resources :users
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
-
-  get '/signup', to: 'users#new'
+  get '/signup', to: 'users#signup'
   post '/signup', to: 'users#create'
 
-  get '/reset_password', to: 'users#new'
+  get '/forgot_password', to: 'users#forgotpassword'
+  get '/reset_password', to: 'users#resetpassword'
   
-  get    '/login',   to: 'sessions#new'
+  get    '/login',   to: 'sessions#login'
   post   '/login',   to: 'sessions#create'
-  get '/logout',  to: 'sessions#destroy'
+  get    '/logout',  to: 'sessions#destroy'
   
 
   # Landing Page

@@ -1,0 +1,37 @@
+
+<% provide(:title, "Forgot Password") %>
+
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+    <div>
+        <h1 class="logo-name">RST</h1>
+    </div>
+    <p>
+      Enter your email address to receive the link to reset your password
+    </p>
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+  
+        <div class="form-group">
+          <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+        </div>
+        <% if @message.present? %>
+        <div id="error_result">
+          <div class="alert alert-danger">
+            <%= @message %>
+            <script type="text/javascript" charset="utf-8"> 
+              var email = "<%= @userinfo[:email] || 'null' %>";
+              $("#password_reset_email").val(email);
+            </script>
+          </div>
+        </div>
+        <% end %>
+        <%= f.submit "Submit", class: "btn btn-primary block full-width m-b" %>
+
+        <a class="btn btn-sm btn-white btn-block" href="<%= url_for :controller => 'sessions', :action => 'login' %>">Log In</a>
+    <% end %>
+    <p class="m-t"> <small>Inspinia we app framework base &copy; </small> </p>
+    <script>
+    document.getElementById("session_email").onblur = function() {
+      $("#error_result").remove();
+    }
+    </script>
+</div>

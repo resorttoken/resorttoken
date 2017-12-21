@@ -18658,3 +18658,557 @@ I, [2017-11-21T23:17:06.960229 #25305]  INFO -- : Writing /home/deploy/apps/reso
  DEBUG [67be2c32] 	
  DEBUG [67be2c32] 	(See full trace by running task with --trace)
  DEBUG [67be2c32] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-07 23:33:26 -0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2a9e7a6e] Running [ -d ~/.rvm ] as deploy@resorttoken.com
+ DEBUG [2a9e7a6e] Command: [ -d ~/.rvm ]
+ DEBUG [2a9e7a6e] Finished in 3.215 seconds with exit status 0 (successful).
+ DEBUG [7b2a43f6] Running ~/.rvm/bin/rvm version as deploy@resorttoken.com
+ DEBUG [7b2a43f6] Command: ~/.rvm/bin/rvm version
+ DEBUG [7b2a43f6] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7b2a43f6] 	
+ DEBUG [7b2a43f6] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [1b6a9d68] Running ~/.rvm/bin/rvm current as deploy@resorttoken.com
+ DEBUG [1b6a9d68] Command: ~/.rvm/bin/rvm current
+ DEBUG [1b6a9d68] 	ruby-2.3.3
+ DEBUG [1b6a9d68] 	
+ DEBUG [1b6a9d68] Finished in 0.923 seconds with exit status 0 (successful).
+ DEBUG [9f38c616] Running ~/.rvm/bin/rvm default do ruby --version as deploy@resorttoken.com
+ DEBUG [9f38c616] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9f38c616] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [9f38c616] 	
+ DEBUG [9f38c616] Finished in 1.027 seconds with exit status 0 (successful).
+  INFO [5d52049f] Running /usr/bin/env mkdir -p /tmp as deploy@resorttoken.com
+ DEBUG [5d52049f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5d52049f] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-resorttoken-production-mike.sh 0.0%
+  INFO Uploading /tmp/git-ssh-resorttoken-production-mike.sh 100.0%
+  INFO [fed6b71a] Running /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh as deploy@resorttoken.com
+ DEBUG [fed6b71a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-resorttoken-production-mike.sh
+  INFO [fed6b71a] Finished in 0.789 seconds with exit status 0 (successful).
+  INFO [bc5193c1] Running /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD as deploy@resorttoken.com
+ DEBUG [bc5193c1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git ls-remote git@github.com:resorttoken/resorttoken.git HEAD )
+ DEBUG [bc5193c1] 	2c692ec0e65635bd70115272840db1d91f3f5398
+ DEBUG [bc5193c1] 		HEAD
+  INFO [bc5193c1] Finished in 1.916 seconds with exit status 0 (successful).
+  INFO [37339e80] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases as deploy@resorttoken.com
+ DEBUG [37339e80] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared /home/deploy/apps/resorttoken/releases
+  INFO [37339e80] Finished in 0.746 seconds with exit status 0 (successful).
+  INFO [c6160a1c] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets as deploy@resorttoken.com
+ DEBUG [c6160a1c] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/shared/public/assets
+  INFO [c6160a1c] Finished in 0.893 seconds with exit status 0 (successful).
+ DEBUG [f2bb5c6b] Running [ -f /home/deploy/apps/resorttoken/shared/puma.rb ] as deploy@resorttoken.com
+ DEBUG [f2bb5c6b] Command: [ -f /home/deploy/apps/resorttoken/shared/puma.rb ]
+ DEBUG [f2bb5c6b] Finished in 0.977 seconds with exit status 0 (successful).
+ DEBUG [9e4460fd] Running [ -f /home/deploy/apps/resorttoken/current/REVISION ] as deploy@resorttoken.com
+ DEBUG [9e4460fd] Command: [ -f /home/deploy/apps/resorttoken/current/REVISION ]
+ DEBUG [9e4460fd] Finished in 0.790 seconds with exit status 0 (successful).
+ DEBUG [2da8754b] Running /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null as deploy@resorttoken.com
+ DEBUG [2da8754b] Command: /usr/bin/env cat /home/deploy/apps/resorttoken/current/REVISION 2>/dev/null
+ DEBUG [2da8754b] 	8fcba70599e95ba0145e6ab3c9436099aa04fc12
+ DEBUG [2da8754b] 	
+ DEBUG [2da8754b] Finished in 0.791 seconds with exit status 0 (successful).
+ DEBUG [9613441f] Running [ -f /home/deploy/apps/resorttoken/repo/HEAD ] as deploy@resorttoken.com
+ DEBUG [9613441f] Command: [ -f /home/deploy/apps/resorttoken/repo/HEAD ]
+ DEBUG [9613441f] Finished in 1.045 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/resorttoken/repo
+ DEBUG [8c4b514f] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [8c4b514f] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [8c4b514f] Finished in 1.367 seconds with exit status 0 (successful).
+  INFO [f41481f2] Running /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git as deploy@resorttoken.com
+ DEBUG [f41481f2] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote set-url origin git@github.com:resorttoken/resorttoken.git )
+  INFO [f41481f2] Finished in 1.567 seconds with exit status 0 (successful).
+  INFO [7cf198c2] Running /usr/bin/env git remote update --prune as deploy@resorttoken.com
+ DEBUG [7cf198c2] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7cf198c2] 	Fetching origin
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	remote: Counting objects: 1033, done.[K
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	remote: Compressing objects:   0% (1/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   1% (10/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   2% (19/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing obj
+ DEBUG [7cf198c2] 	ects:   3% (28/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   4% (38/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   5% (47/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   6% (56
+ DEBUG [7cf198c2] 	/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   7% (66/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   8% (75/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:   9% (84/931)   [K
+ DEBUG [7cf198c2] 	remote: Compr
+ DEBUG [7cf198c2] 	essing objects:  10% (94/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  11% (103/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  12% (112/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objec
+ DEBUG [7cf198c2] 	ts:  13% (122/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  14% (131/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  15% (140/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  16% (1
+ DEBUG [7cf198c2] 	49/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  17% (159/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  18% (168/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  19% (177/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  20% (187/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  21% (196/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  22% (205/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing
+ DEBUG [7cf198c2] 	 objects:  23% (215/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  24% (224/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  25% (233/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  
+ DEBUG [7cf198c2] 	26% (243/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  27% (252/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  28% (261/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  29% (270/93
+ DEBUG [7cf198c2] 	1)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  30% (280/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  31% (289/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  32% (298/931)   [K
+ DEBUG [7cf198c2] 	remote: Compr
+ DEBUG [7cf198c2] 	essing objects:  33% (308/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  34% (317/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  35% (326/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing obje
+ DEBUG [7cf198c2] 	cts:  36% (336/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  37% (345/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  38% (354/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  39% (
+ DEBUG [7cf198c2] 	364/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  40% (373/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  41% (382/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  42% (392/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  43% (401/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  44% (410/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  45% (419/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  46% (429/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  47% (438/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  48% (447/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  49% (457/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  50% (466/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  51% (475/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  52% (485/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  53% (494/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  54% (503/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  55% (513/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  56% (522/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  57% (531/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  58% (540/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  59% (550/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  60% (559/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  61% (568/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  62% (578/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  63% (587/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  64% (596/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  65% (606/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  66% (615/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  67% (624/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  68% (634/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  69% (643/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  70% (652/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  71% (662/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  72% (671/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  73% (680/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  74% (689/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  75% (699/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  76% (708/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  77% (717/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  78% (727/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  79% (736/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  80% (745/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  81% (755/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  82% (764/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  83% (773/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  84% (783/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  85% (792/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  86% (801/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  87% (810/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  88% (820/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  89% (829/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  90% (838/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  91% (848/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  92% (857/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  93% (866/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  94% (876/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  95% (885/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  96% (894/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  97% (904/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  98% (913/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects:  99% (922/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects: 100% (931/931)   [K
+ DEBUG [7cf198c2] 	remote: Compressing objects: 100% (931/931), done.[K
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	Receiving objects:   0% (1/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   1% (11/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   2% (21/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   3% (31/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   4% (42/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   5% (52/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   6% (62/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   7% (73/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   8% (83/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:   9% (93/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  10% (104/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  11% (114/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  12% (124/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  13% (135/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  14% (145/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  15% (155/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  16% (166/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  17% (176/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  18% (186/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  19% (197/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  20% (207/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  21% (217/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  22% (228/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  23% (238/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  24% (248/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  25% (259/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  26% (269/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  27% (279/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  28% (290/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  29% (300/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  30% (310/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  31% (321/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  32% (331/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  33% (341/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  34% (352/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  35% (362/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  36% (372/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  37% (383/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  38% (393/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  39% (403/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  40% (414/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  41% (424/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  42% (434/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  43% (445/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  44% (455/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  45% (465/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  46% (476/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  47% (486/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  48% (496/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  49% (507/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  50% (517/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  51% (527/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  52% (538/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  53% (548/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  54% (558/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  55% (569/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  56% (579/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  57% (589/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  58% (600/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  59% (610/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  60% (620/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  61% (631/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  62% (641/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  63% (651/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  64% (662/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  65% (672/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  66% (682/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  67% (693/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  68% (703/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  69% (713/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  70% (724/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  71% (734/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  72% (744/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  73% (755/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  74% (765/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  75% (775/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  76% (786/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  77% (796/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  78% (806/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  79% (817/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  80% (827/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  81% (837/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  82% (848/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  83% (858/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  84% (868/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  85% (879/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  86% (889/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  87% (899/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  88% (910/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  89% (920/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  90% (930/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  91% (941/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  92% (951/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  93% (961/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  94% (972/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  95% (982/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  96% (992/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  97% (1003/1033)   
+ DEBUG [7cf198c2] 	Receiving objects:  98% (1013/1033)   
+ DEBUG [7cf198c2] 	remote: Total 1033 (delta 23), reused 1033 (delta 23), pack-reused 0[K
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	Receiving objects:  99% (1023/1033)   
+ DEBUG [7cf198c2] 	Receiving objects: 100% (1033/1033)   
+ DEBUG [7cf198c2] 	Receiving objects: 100% (1033/1033), 5.62 MiB | 0 bytes/s, done.
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	Resolving deltas:   0% (0/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:   4% (1/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:   8% (2/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  13% (3/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  17% (4/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  21% (5/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  26% (6/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  30% (7/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  34% (8/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  39% (9/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  43% (10/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  47% (11/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  52% (12/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  56% (13/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  60% (14/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  65% (15/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  69% (16/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  73% (17/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  78% (18/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  82% (19/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  86% (20/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  91% (21/23)   
+ DEBUG [7cf198c2] 	Resolving deltas:  95% (22/23)   
+ DEBUG [7cf198c2] 	Resolving deltas: 100% (23/23)   
+ DEBUG [7cf198c2] 	Resolving deltas: 100% (23/23), completed with 22 local objects.
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	From github.com:resorttoken/resorttoken
+ DEBUG [7cf198c2] 	
+ DEBUG [7cf198c2] 	   bd30e2d..2c692ec  master     -> master
+ DEBUG [7cf198c2] 	
+  INFO [7cf198c2] Finished in 4.605 seconds with exit status 0 (successful).
+ DEBUG [cf3bd6d4] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [cf3bd6d4] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [cf3bd6d4] Finished in 1.557 seconds with exit status 0 (successful).
+  INFO [2514ff24] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342 as deploy@resorttoken.com
+ DEBUG [2514ff24] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342 )
+  INFO [2514ff24] Finished in 1.557 seconds with exit status 0 (successful).
+  INFO [f07273f8] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208073342 as deploy@resorttoken.com
+ DEBUG [f07273f8] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/resorttoken/releases/20171208073342 )
+  INFO [f07273f8] Finished in 1.810 seconds with exit status 0 (successful).
+ DEBUG [2b5c61f9] Running if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [2b5c61f9] Command: if test ! -d /home/deploy/apps/resorttoken/repo; then echo "Directory does not exist '/home/deploy/apps/resorttoken/repo'" 1>&2; false; fi
+ DEBUG [2b5c61f9] Finished in 1.551 seconds with exit status 0 (successful).
+ DEBUG [3e2ece06] Running /usr/bin/env git rev-list --max-count=1 master as deploy@resorttoken.com
+ DEBUG [3e2ece06] Command: cd /home/deploy/apps/resorttoken/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-resorttoken-production-mike.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3e2ece06] 	2c692ec0e65635bd70115272840db1d91f3f5398
+ DEBUG [3e2ece06] 	
+ DEBUG [3e2ece06] Finished in 1.596 seconds with exit status 0 (successful).
+ DEBUG [647de068] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [647de068] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi
+ DEBUG [647de068] Finished in 1.554 seconds with exit status 0 (successful).
+  INFO [31f26249] Running /usr/bin/env echo "2c692ec0e65635bd70115272840db1d91f3f5398" >> REVISION as deploy@resorttoken.com
+ DEBUG [31f26249] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && /usr/bin/env echo "2c692ec0e65635bd70115272840db1d91f3f5398" >> REVISION
+  INFO [31f26249] Finished in 1.558 seconds with exit status 0 (successful).
+  INFO [6214548c] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342/public as deploy@resorttoken.com
+ DEBUG [6214548c] Command: /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342/public
+  INFO [6214548c] Finished in 1.547 seconds with exit status 0 (successful).
+ DEBUG [e788cd8e] Running [ -L /home/deploy/apps/resorttoken/releases/20171208073342/public/assets ] as deploy@resorttoken.com
+ DEBUG [e788cd8e] Command: [ -L /home/deploy/apps/resorttoken/releases/20171208073342/public/assets ]
+ DEBUG [e788cd8e] Finished in 1.615 seconds with exit status 1 (failed).
+ DEBUG [27d4bc1d] Running [ -d /home/deploy/apps/resorttoken/releases/20171208073342/public/assets ] as deploy@resorttoken.com
+ DEBUG [27d4bc1d] Command: [ -d /home/deploy/apps/resorttoken/releases/20171208073342/public/assets ]
+ DEBUG [27d4bc1d] Finished in 1.637 seconds with exit status 1 (failed).
+  INFO [4799f0ca] Running /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208073342/public/assets as deploy@resorttoken.com
+ DEBUG [4799f0ca] Command: /usr/bin/env ln -s /home/deploy/apps/resorttoken/shared/public/assets /home/deploy/apps/resorttoken/releases/20171208073342/public/assets
+  INFO [4799f0ca] Finished in 1.557 seconds with exit status 0 (successful).
+ DEBUG [7d83c253] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [7d83c253] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi
+ DEBUG [7d83c253] Finished in 1.569 seconds with exit status 0 (successful).
+ DEBUG [aca38dc5] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle as deploy@resorttoken.com
+ DEBUG [aca38dc5] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/resorttoken/shared/bundle
+ DEBUG [aca38dc5] 	[31mThe following gems are missing[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * public_suffix (3.0.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * addressable (2.5.2)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * sshkit (1.15.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * bindex (0.5.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * byebug (9.1.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capistrano (3.10.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * xpath (2.1.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * capybara (2.15.4)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * childprocess (0.8.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * listen (3.1.5)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * selenium-webdriver (3.7.0)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * spring (2.0.2)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[31m * web-console (3.5.1)[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [aca38dc5] 	
+ DEBUG [aca38dc5] Finished in 2.763 seconds with exit status 1 (failed).
+  INFO [d2ddfde1] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet as deploy@resorttoken.com
+ DEBUG [d2ddfde1] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/resorttoken/shared/bundle --without development test --deployment --quiet
+  INFO [d2ddfde1] Finished in 1.984 seconds with exit status 0 (successful).
+ DEBUG [42578604] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [42578604] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi
+ DEBUG [42578604] Finished in 0.854 seconds with exit status 0 (successful).
+  INFO [a7bb1acc] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@resorttoken.com
+ DEBUG [a7bb1acc] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [a7bb1acc] 	Yarn executable was not detected in the system.
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:24.244764 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/custom-71b90e0bc9fcbd6a85bcb8d9693cc8758737fe28f4acd60b696070dcea4a9395.css
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:24.245300 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/custom-71b90e0bc9fcbd6a85bcb8d9693cc8758737fe28f4acd60b696070dcea4a9395.css.gz
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:33.760182 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/sessions-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:33.760671 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/sessions-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:33.903064 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/sessions-f78f0f583e152fa235ca51f99bab70d1aeb59675de57c78bcef18b5a2e8a5a5f.js
+ DEBUG [a7bb1acc] 	
+ DEBUG [a7bb1acc] 	I, [2017-12-08T07:34:33.903595 #18854]  INFO -- : Writing /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/sessions-f78f0f583e152fa235ca51f99bab70d1aeb59675de57c78bcef18b5a2e8a5a5f.js.gz
+ DEBUG [a7bb1acc] 	
+  INFO [a7bb1acc] Finished in 39.824 seconds with exit status 0 (successful).
+ DEBUG [8ef515e6] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [8ef515e6] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi
+ DEBUG [8ef515e6] Finished in 0.790 seconds with exit status 0 (successful).
+  INFO [4f55a7ea] Running /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [4f55a7ea] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && /usr/bin/env mkdir -p /home/deploy/apps/resorttoken/releases/20171208073342/assets_manifest_backup
+  INFO [4f55a7ea] Finished in 0.804 seconds with exit status 0 (successful).
+ DEBUG [98ad054e] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [98ad054e] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest*
+ DEBUG [98ad054e] 	/home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [98ad054e] 	
+ DEBUG [98ad054e] Finished in 0.858 seconds with exit status 0 (successful).
+ DEBUG [3a10a71d] Running /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest* as deploy@resorttoken.com
+ DEBUG [3a10a71d] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && /usr/bin/env ls /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest*
+ DEBUG [3a10a71d] 	/home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json
+ DEBUG [3a10a71d] 	
+ DEBUG [3a10a71d] Finished in 0.813 seconds with exit status 0 (successful).
+  INFO [5c45a758] Running /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208073342/assets_manifest_backup as deploy@resorttoken.com
+ DEBUG [5c45a758] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && /usr/bin/env cp /home/deploy/apps/resorttoken/releases/20171208073342/public/assets/.sprockets-manifest-ab55b84575a4b59450801e675b456e9d.json /home/deploy/apps/resorttoken/releases/20171208073342/assets_manifest_backup
+  INFO [5c45a758] Finished in 0.862 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [54782d69] Running if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [54782d69] Command: if test ! -d /home/deploy/apps/resorttoken/releases/20171208073342; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases/20171208073342'" 1>&2; false; fi
+ DEBUG [54782d69] Finished in 0.795 seconds with exit status 0 (successful).
+  INFO [595efac8] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@resorttoken.com
+ DEBUG [595efac8] Command: cd /home/deploy/apps/resorttoken/releases/20171208073342 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [595efac8] 	== 20171202020342 CreateUsers: migrating ======================================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	-- create_table(:users)
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	   -> 0.0165s
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171202020342 CreateUsers: migrated (0.0167s) =============================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171202020643 AddIndexToUsersEmail: migrating =============================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	   -> 0.0077s
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171202020643 AddIndexToUsersEmail: migrated (0.0078s) ====================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171202020949 AddPasswordDigestToUsers: migrating =========================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	-- add_column(:users, :password_digest, :string)
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	   -> 0.0015s
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171202020949 AddPasswordDigestToUsers: migrated (0.0016s) ================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171205072242 AddRememberDigestToUsers: migrating =========================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	-- add_column(:users, :remember_digest, :string)
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	   -> 0.0004s
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	== 20171205072242 AddRememberDigestToUsers: migrated (0.0005s) ================
+ DEBUG [595efac8] 	
+ DEBUG [595efac8] 	
+  INFO [595efac8] Finished in 2.839 seconds with exit status 0 (successful).
+  INFO [eab53c6c] Running /usr/bin/env ln -s /home/deploy/apps/resorttoken/releases/20171208073342 /home/deploy/apps/resorttoken/releases/current as deploy@resorttoken.com
+ DEBUG [eab53c6c] Command: /usr/bin/env ln -s /home/deploy/apps/resorttoken/releases/20171208073342 /home/deploy/apps/resorttoken/releases/current
+  INFO [eab53c6c] Finished in 0.824 seconds with exit status 0 (successful).
+  INFO [ef3c9fda] Running /usr/bin/env mv /home/deploy/apps/resorttoken/releases/current /home/deploy/apps/resorttoken as deploy@resorttoken.com
+ DEBUG [ef3c9fda] Command: /usr/bin/env mv /home/deploy/apps/resorttoken/releases/current /home/deploy/apps/resorttoken
+  INFO [ef3c9fda] Finished in 0.849 seconds with exit status 0 (successful).
+ DEBUG [5ada64f7] Running /usr/bin/env ls -x /home/deploy/apps/resorttoken/releases as deploy@resorttoken.com
+ DEBUG [5ada64f7] Command: /usr/bin/env ls -x /home/deploy/apps/resorttoken/releases
+ DEBUG [5ada64f7] 	20171122203927
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171122205840
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171122212407
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171122214054
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171127203456
+ DEBUG [5ada64f7] 	
+ DEBUG [5ada64f7] 	20171208065234
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171208070846
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171208072539
+ DEBUG [5ada64f7] 		
+ DEBUG [5ada64f7] 	20171208073342
+ DEBUG [5ada64f7] 	
+ DEBUG [5ada64f7] Finished in 1.066 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 9 deployed releases on resorttoken.com
+ DEBUG [cc3987dc] Running [ -d /home/deploy/apps/resorttoken/current ] as deploy@resorttoken.com
+ DEBUG [cc3987dc] Command: [ -d /home/deploy/apps/resorttoken/current ]
+ DEBUG [cc3987dc] Finished in 0.810 seconds with exit status 0 (successful).
+ DEBUG [258c9484] Running /usr/bin/env readlink /home/deploy/apps/resorttoken/current as deploy@resorttoken.com
+ DEBUG [258c9484] Command: /usr/bin/env readlink /home/deploy/apps/resorttoken/current
+ DEBUG [258c9484] 	/home/deploy/apps/resorttoken/releases/20171208073342
+ DEBUG [258c9484] 	
+ DEBUG [258c9484] Finished in 0.791 seconds with exit status 0 (successful).
+  INFO [9b78585c] Running /usr/bin/env rm -rf /home/deploy/apps/resorttoken/releases/20171122203927 /home/deploy/apps/resorttoken/releases/20171122205840 /home/deploy/apps/resorttoken/releases/20171122212407 /home/deploy/apps/resorttoken/releases/20171122214054 as deploy@resorttoken.com
+ DEBUG [9b78585c] Command: /usr/bin/env rm -rf /home/deploy/apps/resorttoken/releases/20171122203927 /home/deploy/apps/resorttoken/releases/20171122205840 /home/deploy/apps/resorttoken/releases/20171122212407 /home/deploy/apps/resorttoken/releases/20171122214054
+  INFO [9b78585c] Finished in 4.297 seconds with exit status 0 (successful).
+ DEBUG [c2995afc] Running if test ! -d /home/deploy/apps/resorttoken/releases; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [c2995afc] Command: if test ! -d /home/deploy/apps/resorttoken/releases; then echo "Directory does not exist '/home/deploy/apps/resorttoken/releases'" 1>&2; false; fi
+ DEBUG [c2995afc] Finished in 0.785 seconds with exit status 0 (successful).
+  INFO [485abadd] Running /usr/bin/env echo "Branch master (at 2c692ec0e65635bd70115272840db1d91f3f5398) deployed as release 20171208073342 by mike" >> /home/deploy/apps/resorttoken/revisions.log as deploy@resorttoken.com
+ DEBUG [485abadd] Command: cd /home/deploy/apps/resorttoken/releases && /usr/bin/env echo "Branch master (at 2c692ec0e65635bd70115272840db1d91f3f5398) deployed as release 20171208073342 by mike" >> /home/deploy/apps/resorttoken/revisions.log
+  INFO [485abadd] Finished in 0.830 seconds with exit status 0 (successful).
+ DEBUG [5f03006e] Running if test ! -d /home/deploy/apps/resorttoken/current; then echo "Directory does not exist '/home/deploy/apps/resorttoken/current'" 1>&2; false; fi as deploy@resorttoken.com
+ DEBUG [5f03006e] Command: if test ! -d /home/deploy/apps/resorttoken/current; then echo "Directory does not exist '/home/deploy/apps/resorttoken/current'" 1>&2; false; fi
+ DEBUG [5f03006e] Finished in 0.785 seconds with exit status 0 (successful).
+ DEBUG [e240fc68] Running [ -f /home/deploy/apps/resorttoken/shared/tmp/pids/puma.pid ] as deploy@resorttoken.com
+ DEBUG [e240fc68] Command: [ -f /home/deploy/apps/resorttoken/shared/tmp/pids/puma.pid ]
+ DEBUG [e240fc68] Finished in 0.790 seconds with exit status 0 (successful).
+ DEBUG [48ba66a2] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/resorttoken/shared/tmp/pids/puma.pid ) as deploy@resorttoken.com
+ DEBUG [48ba66a2] Command: cd /home/deploy/apps/resorttoken/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deploy/apps/resorttoken/shared/tmp/pids/puma.pid ) )
+ DEBUG [48ba66a2] Finished in 0.831 seconds with exit status 0 (successful).
+  INFO [5c79e669] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/resorttoken/shared/tmp/pids/puma.state -F /home/deploy/apps/resorttoken/shared/puma.rb restart as deploy@resorttoken.com
+ DEBUG [5c79e669] Command: cd /home/deploy/apps/resorttoken/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/resorttoken/shared/tmp/pids/puma.state -F /home/deploy/apps/resorttoken/shared/puma.rb restart )
+ DEBUG [5c79e669] 	Command restart sent success
+ DEBUG [5c79e669] 	
+  INFO [5c79e669] Finished in 1.360 seconds with exit status 0 (successful).

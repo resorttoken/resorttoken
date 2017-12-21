@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
-  def new
+  def signup
     @user = User.new
-    render :layout => "registeration"
+    render :layout => "empty"
+  end
+
+  def resetpassword
+    render :layout => "empty"
   end
   def show
     @user = User.find(params[:id])
@@ -16,7 +20,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the Resorttoken!"
       redirect_to @user
     else 
-      render :layout => "registeration", :template => 'users/new'
+      render :layout => "empty", :template => 'users/signup'
     end
   end
 
